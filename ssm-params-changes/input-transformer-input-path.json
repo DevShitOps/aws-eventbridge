@@ -1,0 +1,5 @@
+{
+  "operation": "$.detail.operation",
+  "resource": "$.resources",
+  "time": "$.time"
+}

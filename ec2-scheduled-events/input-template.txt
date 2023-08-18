@@ -1,0 +1,1 @@
+"There is `<service>` scheduled event. eventTypeCode: `<eventTypeCode>`, Start time: `<startTime>`, End Time `<endTime>`"

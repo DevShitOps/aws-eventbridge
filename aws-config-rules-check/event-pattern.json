@@ -1,0 +1,11 @@
+{
+  "source": ["aws.config"],
+  "detail-type": ["Config Rules Compliance Change"],
+  "detail": {
+    "messageType": ["ComplianceChangeNotification"],
+    "configRuleName": ["rds_check_tags", "s3_check_tags", "ec2_check_tags"],
+    "newEvaluationResult": {
+      "complianceType": ["NON_COMPLIANT"]
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "source": ["aws.ssm"],
+  "detail-type": ["Parameter Store Policy Action", "Parameter Store Change"]
+}

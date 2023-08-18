@@ -1,0 +1,10 @@
+{
+  "annotation": "$.detail.annotation",
+  "awsAccountId": "$.detail.awsAccountId",
+  "awsRegion": "$.detail.awsRegion",
+  "compliance": "$.detail.newEvaluationResult.complianceType",
+  "resourceId": "$.detail.resourceId",
+  "resourceType": "$.detail.resourceType",
+  "rule": "$.detail.configRuleName",
+  "time": "$.detail.newEvaluationResult.resultRecordedTime"
+}

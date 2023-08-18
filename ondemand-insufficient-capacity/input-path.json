@@ -1,0 +1,6 @@
+{
+  "Asg_status": "$.detail.StatusCode",
+  "asg_name": "$.detail.AutoScalingGroupName",
+  "error": "$.detail.StatusMessage",
+  "time": "$.time"
+}

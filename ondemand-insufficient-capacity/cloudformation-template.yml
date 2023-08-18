@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template for EventBridge rule 'ondemand-insufficient-capacity'
+Resources:
+  EventRule0:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: ondemand-insufficient-capacity
+      EventBusName: default
+      EventPattern:
+        source:
+          - aws.autoscaling
+        detail-type:
+          - EC2 Instance Launch Unsuccessful
+        detail:
+          StatusCode:
+            - Failed
+          StatusMessage:
+            - prefix: >-
+                Could not launch On-Demand Instances.
+                InsufficientInstanceCapacity
+      Name: ondemand-insufficient-capacity
+      State: ENABLED
+      Targets:
+        - Id: Id6e3ea7c9-4637-464f-9b17-9d912003d9b2
+          Arn: >-
+            arn:aws:sns:us-east-1:377703961998:sns2slack_ag_alert_adcolony_exchange_kpi_service
+          InputTransformer:
+            InputPathsMap:
+              Asg_status: $.detail.StatusCode
+              asg_name: $.detail.AutoScalingGroupName
+              error: $.detail.StatusMessage
+              time: $.time
+            InputTemplate: >-
+              "On-Demand instance capacity error on ASG `<asg_name>` at
+              `<time>`"
+

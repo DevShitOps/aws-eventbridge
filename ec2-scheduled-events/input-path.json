@@ -1,0 +1,6 @@
+{
+  "endTime": "$.detail.endTime",
+  "eventTypeCode": "$.detail.eventTypeCode",
+  "service": "$.detail.service",
+  "startTime": "$.detail.startTime"
+}

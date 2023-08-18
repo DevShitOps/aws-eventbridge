@@ -1,0 +1,1 @@
+"Operation `<operation>` was performed on SSM Parameter `<resource>` at `<time>`."
